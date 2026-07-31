@@ -1,0 +1,108 @@
+# OpenMind
+
+## Copy of Docs
+
+- [OM1](https://docs.openmind.com/developing/readme.md): Welcome to OpenMind. We build the software that makes robots useful.
+- [Introduction](https://docs.openmind.com/developing/0_introduction.md): OpenMind builds open-source software that helps machines think, learn, and collaborate
+- [Quick Start](https://docs.openmind.com/developing/1_get-started.md): Learn how to install, set up and configure OM1.
+- [Architecture](https://docs.openmind.com/developing/2_architecture.md): Core Architecture and Runtime Flow
+- [Understanding Core Concepts](https://docs.openmind.com/core-concepts/concepts.md)
+- [Project Structure](https://docs.openmind.com/core-concepts/concepts/7_project_structure.md): Project structure and flow diagram
+- [Configuration](https://docs.openmind.com/core-concepts/concepts/3_configuration.md): Configuration
+- [Inputs](https://docs.openmind.com/core-concepts/concepts/4_inputs.md): Input Plugin Overview
+- [LLMs](https://docs.openmind.com/core-concepts/concepts/5_llms.md): LLM Integration
+- [Actions](https://docs.openmind.com/core-concepts/concepts/6_actions.md): Actions
+- [Backgrounds](https://docs.openmind.com/core-concepts/concepts/8_backgrounds.md): Backgrounds
+- [Middleware](https://docs.openmind.com/core-concepts/middleware.md): ROS2 and DDS Setup
+- [CycloneDDS](https://docs.openmind.com/core-concepts/middleware/cyclonedds.md): Installation
+- [ROS2-humble](https://docs.openmind.com/core-concepts/middleware/ros2-humble.md): Installation
+- [Zenoh ROS2 Bridge](https://docs.openmind.com/core-concepts/middleware/zenoh-bridge.md): Installation
+- [Troubleshooting Guide](https://docs.openmind.com/core-concepts/9_troubleshooting_guide.md): Guide to troubleshoot some common issues
+- [MCP Integration](https://docs.openmind.com/mcp/mcp-integration.md): Connect your OM1 agent to external tools via Model Context Protocol
+- [Introduction](https://docs.openmind.com/developer-cookbook/introduction.md): Introduction
+- [Configuration](https://docs.openmind.com/developer-cookbook/introduction/config.md): Config
+- [Input](https://docs.openmind.com/developer-cookbook/introduction/input.md): Build a new input plugin
+- [New Mode](https://docs.openmind.com/developer-cookbook/introduction/new_mode.md): Add a new mode
+- [Examples](https://docs.openmind.com/developer-cookbook/examples.md): Examples Overview
+- [Conversation](https://docs.openmind.com/developer-cookbook/examples/conversation.md): Using Cloud Endpoints for Voice Inputs and Text to Speech
+- [Smart Toy](https://docs.openmind.com/developer-cookbook/examples/smart_toy.md): Combining Inputs, an LLM, and Outputs to create a smart, engaging toy.
+- [OM1 Integration with different machines](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines.md)
+- [Unitree G1 Humanoid](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/unitree_g1_humanoid.md): Unitree G1 Humanoid
+- [Unitree Go2 Quadruped](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/unitree_go2_quadruped.md): Unitree Go2 EDU Quadruped (dog)
+- [Raspberry Pi](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/raspberrypi.md): Getting Started with OM1 on Raspberry Pi
+- [Tesla Dimo](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/tesla_dimo.md): Bring your Tesla to Life
+- [TurtleBot4](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/turtlebot4_zenoh.md): TurtleBot4 Basic Setup
+- [UBTech Yanshee](https://docs.openmind.com/developer-cookbook/om1-integration-with-different-machines/ubtech_yanshee.md): UbTech Yanshee Setup (Mini Humanoid)
+- [Brainpack Introduction](https://docs.openmind.com/full-autonomy-guidelines/brainpack_introduction.md): Introduction to the BrainPack
+- [Overview](https://docs.openmind.com/full-autonomy-guidelines/architecture_overview.md): Full autonomy architecture and introduction
+- [Hybrid Localisation](https://docs.openmind.com/full-autonomy-guidelines/localization.md): Introducing Hybrid Localization
+- [NVIDIA Thor](https://docs.openmind.com/full-autonomy-guidelines/nvidia_thor.md): Getting Started with OM1 on Nvidia Thor Dev Kit
+- [Premium Features](https://docs.openmind.com/full-autonomy-guidelines/premium_features.md)
+- [API Endpoints to Interact with Premium Features](https://docs.openmind.com/full-autonomy-guidelines/api_endpoints.md): REST API documentation for OM1 ROS2 SDK
+- [Modes](https://docs.openmind.com/modes-and-lifecycle/modes.md): Introduction to the OM1 modes
+- [Mode Selection](https://docs.openmind.com/modes-and-lifecycle/mode_selection.md): Different ways to switch between modes
+- [Transition Rules](https://docs.openmind.com/modes-and-lifecycle/transition_rules.md): Introduction to transition rules
+- [Lifecycle](https://docs.openmind.com/modes-and-lifecycle/lifecycle.md): Introducing Lifecycle
+- [Gazebo](https://docs.openmind.com/simulators/gazebo.md): Quadruped Simulation and Control
+- [Isaac Sim](https://docs.openmind.com/simulators/isaac-sim.md): Simulation and Control with OM1
+- [Cloud Isaac Sim](https://docs.openmind.com/simulators/cloud-isaac-sim.md): Learn how to run cloud Isaac Sim integrated with OM1
+- [Troubleshooting Guidelines](https://docs.openmind.com/simulators/troubleshooting.md)
+- [API Reference](https://docs.openmind.com/api-reference/introduction.md): Welcome to the OpenMind API Reference
+- [Account & Key Management](https://docs.openmind.com/api-reference/introduction/account_and_key_management.md): Managing your OpenMind Account and API Keys
+- [Google ASR](https://docs.openmind.com/api-reference/introduction/google_asr.md): Google Speech Recognition (ASR) API Reference
+- [ElevenLabs ASR](https://docs.openmind.com/api-reference/introduction/elevenlabs_asr.md): ElevenLabs Automatic Speech Recognition (ASR) API Reference
+- [ElevenLabs TTS](https://docs.openmind.com/api-reference/introduction/elevenlabs_tts.md): ElevenLabs Text to Speech (TTS)
+- [LLM](https://docs.openmind.com/api-reference/introduction/llm.md): Multi-Provider Large Language Model API
+- [Riva](https://docs.openmind.com/api-reference/introduction/riva.md): Riva Speech Recognition (ASR) and Text-to-Speech (TTS)
+- [ViLA VLM](https://docs.openmind.com/api-reference/introduction/vila_vlm.md): VILA Vision-Language Model API Reference
+- [Subscription Plans](https://docs.openmind.com/api-reference/api_pricing.md): API Pricing
+- [Major Updates](https://docs.openmind.com/release-notes/major-updates.md)
+- [Beta Release](https://docs.openmind.com/release-notes/major-updates/beta_release.md): First Beta Release of our software stack
+- [Production Ready Release](https://docs.openmind.com/release-notes/major-updates/production_ready_release.md): First Production Ready Release of our software stack
+- [OM1](https://docs.openmind.com/release-notes/om1.md)
+- [beta](https://docs.openmind.com/release-notes/om1/beta.md): v1.0.2-beta.2
+- [v1.0.x](https://docs.openmind.com/release-notes/om1/v1.0.x.md): v1.0.1
+- [Docker Images](https://docs.openmind.com/release-notes/om1/docker_images.md)
+- [OM1 Avatar](https://docs.openmind.com/release-notes/om1-avatar.md)
+- [beta](https://docs.openmind.com/release-notes/om1-avatar/beta.md): v1.0.0-beta.3
+- [v1.0.x](https://docs.openmind.com/release-notes/om1-avatar/v1.0.x.md): v1.0.2
+- [Docker Images](https://docs.openmind.com/release-notes/om1-avatar/docker_images.md)
+- [OM1 ROS2 SDK](https://docs.openmind.com/release-notes/om1-ros2-sdk.md)
+- [beta](https://docs.openmind.com/release-notes/om1-ros2-sdk/beta.md): v1.0.1-beta.3
+- [v1.0.x](https://docs.openmind.com/release-notes/om1-ros2-sdk/v1.0.x.md): v1.0.1
+- [Docker Images](https://docs.openmind.com/release-notes/om1-ros2-sdk/docker_images.md)
+- [Video Processor](https://docs.openmind.com/release-notes/video-processor.md)
+- [beta](https://docs.openmind.com/release-notes/video-processor/beta.md): v1.0.1-beta.3
+- [v1.0.x](https://docs.openmind.com/release-notes/video-processor/v1.0.x.md): v1.0.2
+- [Docker Images](https://docs.openmind.com/release-notes/video-processor/docker_images.md)
+- [OM1 System Setup](https://docs.openmind.com/release-notes/om1-system-setup.md)
+- [beta](https://docs.openmind.com/release-notes/om1-system-setup/beta.md): v1.0.1-beta.1
+- [v1.0.x](https://docs.openmind.com/release-notes/om1-system-setup/v1.0.x.md): v1.0.2
+- [Docker Images](https://docs.openmind.com/release-notes/om1-system-setup/docker_images.md)
+- [Asimov Governance](https://docs.openmind.com/robotics/asimov_governance.md): Blockchain-based Governance for Robots
+- [CRSF Long Range Control](https://docs.openmind.com/robotics/crsf_long_range_control.md): CRSF Protocol Support
+- [GPS Compass](https://docs.openmind.com/robotics/gps_compass.md): Arduino GPS and Compass Support
+- [Mac](https://docs.openmind.com/robotics/mac.md): Apple Mac for Robotics
+- [Media Server](https://docs.openmind.com/robotics/media_server.md)
+- [Motion Planning LiDAR A1M8](https://docs.openmind.com/robotics/motion_planning_lidara1m8.md): RPLidar A1M8 Setup and Use
+- [Motion Planning TurtleBot4](https://docs.openmind.com/robotics/motion_planning_turtlebot4.md): TurtleBot4 Autonomous Movement Logic
+- [Motion Planning Unitree Go2](https://docs.openmind.com/robotics/motion_planning_unitree_go2.md): Unitree Go2 Autonomous Movement Logic
+- [RF Mapping](https://docs.openmind.com/robotics/rf_mapping.md): Rf Mapping
+- [Unitree Go2 Quadruped Configurations](https://docs.openmind.com/robotics/unitree_go2_quadruped_configurations.md): Unitree Go2 EDU Quadruped Configurations
+- [Zenoh](https://docs.openmind.com/robotics/zenoh.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.openmind.com/developing/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

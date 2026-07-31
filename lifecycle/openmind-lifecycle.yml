@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/release-notes/major-updates + https://github.com/OpenMind/OM1/releases
+versioning:
+  scheme: path-prefixed (/api/core) for the cloud API; semver release tags for OM1 software components
+  current_api_path: /api/core
+  docs: https://docs.openmind.com/api-reference/introduction
+release_channels:
+  components:
+  - {name: OM1, latest: v1.0.1, beta: v1.0.2-beta.2}
+  - {name: OM1 Avatar, latest: v1.0.2, beta: v1.0.0-beta.3}
+  - {name: OM1 ROS2 SDK, latest: v1.0.1, beta: v1.0.1-beta.3}
+  - {name: Video Processor, latest: v1.0.2, beta: v1.0.1-beta.3}
+  - {name: OM1 System Setup, latest: v1.0.2, beta: v1.0.1-beta.1}
+  notes: OM1 (Go) publishes GitHub releases including a rolling `nightly` development build.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: no formal deprecation/sunset policy documented
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+changelog_ref: changelog/openmind-changelog.yml
+notes: >-
+  No dedicated status page or deprecation policy was found; only the release
+  notes (Major Updates) and GitHub releases are published. StatusPage and
+  Deprecation pointers are intentionally omitted (nothing to point at).

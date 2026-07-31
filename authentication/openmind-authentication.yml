@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/api-reference/introduction + https://docs.openmind.com/api-reference/introduction/account_and_key_management
+docs: https://docs.openmind.com/api-reference/introduction/account_and_key_management
+summary:
+  types: [apiKey, http]
+  api_key_in: [header, query]
+  http_schemes: [bearer]
+schemes:
+- name: OpenMindApiKey
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  applies_to: OpenMind LLM / ASR / TTS / ViLA APIs
+  description: >-
+    API key issued from the OpenMind portal, sent in the `x-api-key` header (or
+    as `Authorization: Bearer <key>`). Keys are prefixed `om1_live_` (production)
+    or `om1_test_` (test). For WebSocket connections the key is passed as the
+    `api_key` query-string parameter (wss://api.openmind.com?api_key=<KEY>).
+  sources: [docs]
+- name: OpenMindApiKeyBearer
+  type: http
+  scheme: bearer
+  applies_to: OpenMind LLM / ASR / TTS / ViLA APIs
+  description: Same OpenMind API key accepted as an Authorization Bearer token.
+  sources: [docs]
+- name: ClerkJWT
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  applies_to: OpenMind Core API (api.openmind.com/api/core account & key management)
+  description: >-
+    Account and API-key management endpoints require a JWT session token issued
+    by Clerk (clerk.com), sent as `Authorization: Bearer <JWT>`. Obtain it from
+    the OpenMind portal session or programmatically via the Clerk SDK.
+  sources: [docs]

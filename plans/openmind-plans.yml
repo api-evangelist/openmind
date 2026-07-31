@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/api-reference/api_pricing
+currency: USD
+billing_unit: OMCU (OpenMind Computational Unit)
+signup: https://portal.openmind.com/
+plans:
+- name: Free
+  price: 0
+  period: month
+  api_keys: 1
+  rate_limit_rps: 1
+  omcu: 50
+- name: Standard
+  price: 5
+  period: month
+  api_keys: unlimited
+  rate_limit_rps: 5
+  omcu: 2500
+  features: [Session memory (short-term)]
+- name: Builder
+  price: 25
+  period: month
+  rate_limit_rps: 20
+  omcu: 15000
+  features: [Advanced session memory controls, Dedicated simulator instance (Gazebo/Isaac Sim), Email support, Priority queue, App Store publishing]
+- name: Pro
+  price: 99
+  period: month
+  rate_limit_rps: 40
+  omcu: 100000
+  features: [Unlimited long-term memory, Advanced memory controls, Slack/private support channel]
+- name: Enterprise
+  price: 999
+  period: month
+  rate_limit_rps: 100
+  omcu: 1500000
+  features: [Dedicated GPU pools, Private model access, Custom integration support, All premium features]
+- name: Custom
+  price: null
+  period: null
+  contact: support@openmind.com

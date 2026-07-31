@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.openmind.com (api-reference, mcp-integration, middleware)
+standards:
+- id: openai-chat-completions
+  conforms: true
+  evidence: LLM endpoint accepts the OpenAI Chat Completions request/response format across all providers
+- id: mcp
+  conforms: true
+  evidence: OM1 agents consume Model Context Protocol servers (stdio/sse/http transports) per-mode
+- id: ros2
+  conforms: true
+  evidence: OM1 ROS2 SDK integrates with ROS2 Humble; Nav2 navigation stack and SLAM
+- id: dds
+  conforms: true
+  evidence: middleware supports CycloneDDS and the Zenoh-ROS2 bridge
+- id: oauth2
+  conforms: false
+  evidence: authentication is API key (x-api-key/Bearer) and Clerk JWT; no OAuth2 flows
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'errors use a custom {"error": "..."} envelope, not application/problem+json'
+- id: pagination
+  conforms: false
+  evidence: list endpoints return full arrays; no pagination convention documented
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key/header documented
+notes: >-
+  No published third-party compliance certifications (SOC 2 / ISO 27001 / etc.)
+  were found, so no Compliance pointer is emitted.

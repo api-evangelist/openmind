@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/api-reference/api_pricing
+signal:
+  header: null
+  status_code: 429
+  scope: per-plan requests/second
+notes: >-
+  OpenMind enforces a per-plan requests-per-second ceiling; exceeding it returns
+  429 Too Many Requests. Limits below are from the published subscription plans.
+rate_limits:
+- plan: Free
+  limit_count: 1
+  window: second
+- plan: Standard
+  limit_count: 5
+  window: second
+- plan: Builder
+  limit_count: 20
+  window: second
+- plan: Pro
+  limit_count: 40
+  window: second
+- plan: Enterprise
+  limit_count: 100
+  window: second

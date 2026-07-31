@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/api-reference/introduction/account_and_key_management + https://docs.openmind.com/developing/1_get-started
+test_vs_live:
+  key_prefixes:
+    live: om1_live_
+    test: om1_test_
+  notes: >-
+    API keys returned by the Core API carry a `prefix` field of either
+    `om1_live_` (production) or `om1_test_` (test). Keys are created via
+    POST /api/core/api_keys/create and shown only once.
+placeholder_values:
+- value: openmind_free
+  meaning: Documented placeholder API key that intentionally generates errors (do not use for real requests).
+free_tier:
+  plan: Free
+  cost: $0/month
+  omcu: 50
+  api_keys: 1
+  rate_limit: 1 request/second
+  signup: https://portal.openmind.com/
+simulators:
+- name: Gazebo
+  docs: https://docs.openmind.com/simulators/gazebo
+- name: Isaac Sim
+  docs: https://docs.openmind.com/simulators/isaac-sim
+- name: Cloud Isaac Sim
+  docs: https://docs.openmind.com/simulators/cloud-isaac-sim
+notes: >-
+  OpenMind provides simulation environments (Gazebo, Isaac Sim, cloud Isaac Sim)
+  for testing OM1 agents without physical robots. No fabricated test values are
+  recorded; only published prefixes/placeholders above.

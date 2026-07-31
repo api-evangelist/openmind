@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: generated
+source: https://docs.openmind.com/api-reference + https://docs.openmind.com/full-autonomy-guidelines/api_endpoints
+note: >-
+  OpenMind publishes no OpenAPI spec; skills are grounded in the real documented
+  HTTP method+path of each Core, LLM and Premium ROS2 SDK REST operation.
+skills:
+- file: openmind-manage-api-keys.md
+  name: Manage OpenMind API keys and balance
+  api: OpenMind Core API
+  operations: [GET /api_keys, POST /api_keys/create, POST /api_keys/delete, GET /account/balance]
+- file: openmind-llm-chat.md
+  name: Run a multi-provider LLM chat completion
+  api: OpenMind LLM API
+  operations: ['POST /api/core/{provider}/chat/completions']
+- file: openmind-robot-navigation.md
+  name: Map and navigate a robot with the OM1 ROS2 SDK
+  api: OM1 ROS2 SDK Premium REST API
+  operations: [POST /start/slam, POST /maps/save, POST /start/nav2, POST /api/move_to_pose, GET /api/nav2_status]

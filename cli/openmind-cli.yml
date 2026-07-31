@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/developing/1_get-started
+name: om1
+description: >-
+  OM1 ships a command-line interface. The main entry point is the `om1` binary
+  built from cmd/main.go, driven through the project Makefile.
+binary_ref: packages/openmind-packages.yml
+install:
+- method: source
+  steps:
+  - git clone https://github.com/OpenMind/OM1.git
+  - cd OM1
+  - make deps    # fetch Go modules + zenoh-c library
+  - make build   # compile the om1 binary
+requirements:
+- Go >= 1.23.0
+- make
+- portaudio (audio input/output)
+- ffmpeg (video processing)
+- OpenMind API key (portal.openmind.com)
+commands:
+- command: CONFIG=<config_name> make run
+  description: Run an agent using the named config file (without .json5) from /config.
+- command: CONFIG=<config_name> make dev
+  description: Run with debug logging.
+- command: make deps
+  description: Download Go module dependencies and the zenoh-c library.
+- command: make build
+  description: Compile the OM1 binary.
+- command: make check
+  description: Run fmt, vet, lint and test.
+- command: make fmt
+  description: Format code.
+- command: make lint
+  description: Lint code.
+key_flows:
+- Run the example conversation agent: CONFIG=conversation make run
+- Run the greeting agent: CONFIG=greeting_conversation make run
+- Spin up monitoring: docker-compose up -d grafana prometheus

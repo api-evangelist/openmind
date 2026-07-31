@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/* on OpenMind hosts (2026-07-20)
+notes: >-
+  No machine-readable discovery documents were found. openmind.com returns HTTP
+  200 for /.well-known/security.txt but the body is the React SPA index.html
+  (not a valid RFC 9116 security.txt), so it is recorded as not-present.
+hosts:
+- host: https://api.openmind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://openmind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    note: returns SPA index.html, not an RFC 9116 security.txt
+- host: https://docs.openmind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

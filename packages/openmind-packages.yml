@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: derived
+source: https://github.com/OpenMind + https://docs.openmind.com/developing/1_get-started
+notes: >-
+  OpenMind does not publish first-party client libraries to public registries
+  (npm "om1" and PyPI "openmind" are unrelated third-party packages, verified
+  2026-07-20). The OM1 runtime and its language modules are distributed as
+  first-party open-source repositories (built from source) and as Docker images.
+packages:
+- language: go
+  registry: github
+  name: OpenMind/OM1
+  url: https://github.com/OpenMind/OM1
+  install: git clone https://github.com/OpenMind/OM1.git && cd OM1 && make deps && make build
+  license: MIT
+  official: true
+  description: Modular AI Hardware Abstraction Layer (HAL) and agent runtime for robots (OM1 core; provides the `om1` CLI binary).
+- language: python
+  registry: github
+  name: OpenMind/OM1-modules
+  url: https://github.com/OpenMind/OM1-modules
+  install: git clone https://github.com/OpenMind/OM1-modules.git
+  official: true
+  description: ML and other input/action modules for OM1.
+- language: typescript
+  registry: github
+  name: OpenMind/OM1-avatar
+  url: https://github.com/OpenMind/OM1-avatar
+  install: git clone https://github.com/OpenMind/OM1-avatar.git
+  official: true
+  description: Face display module for OM1 (animated eyes and visual expressions).
+- language: docker
+  registry: docker
+  name: OM1 ROS2 SDK Docker images
+  url: https://docs.openmind.com/release-notes/om1-ros2-sdk/docker_images
+  install: docker pull (see release notes)
+  official: true
+  description: Prebuilt Docker images for the OM1 runtime, avatar, ROS2 SDK, video processor and system setup.

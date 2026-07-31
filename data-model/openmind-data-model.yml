@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.openmind.com/api-reference/introduction/account_and_key_management + https://docs.openmind.com/full-autonomy-guidelines/api_endpoints
+entities:
+- name: Account
+  fields: [plan, omcu_balance, monthly_unused_omcu, monthly_total_omcu, current_period_end, cancel_at_period_end]
+  api: OpenMind Core API
+- name: ApiKey
+  id_prefix: [om1_live_, om1_test_]
+  fields: [id, user_id, name, prefix, total_cost, deleted, created_at, updated_at]
+  api: OpenMind Core API
+- name: ChatCompletion
+  fields: [model, messages, temperature, max_tokens, top_p]
+  api: OpenMind LLM API
+  note: OpenAI-compatible request shape; provider selected via path segment
+- name: Map
+  fields: [name, path, created]
+  api: OM1 ROS2 SDK Orchestrator API (premium)
+- name: Location
+  fields: [name, description, timestamp, pose]
+  api: OM1 ROS2 SDK Orchestrator API (premium)
+- name: Pose
+  fields: [position(x,y,z), orientation(x,y,z,w), covariance]
+  api: OM1 ROS2 SDK Nav2 API (premium)
+- name: NavGoal
+  fields: [goal_id, status, timestamp]
+  api: OM1 ROS2 SDK Nav2 API (premium)
+relationships:
+- from: Account
+  to: ApiKey
+  type: has_many
+  via: user_id
+- from: ApiKey
+  to: Account
+  type: belongs_to
+  via: user_id
+- from: Map
+  to: Location
+  type: has_many
+  via: map_name
+- from: Location
+  to: Pose
+  type: has_one
+  via: pose
+- from: NavGoal
+  to: Pose
+  type: has_one
+  via: position/orientation (target)

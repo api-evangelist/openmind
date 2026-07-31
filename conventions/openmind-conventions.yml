@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.openmind.com/api-reference + https://docs.openmind.com/full-autonomy-guidelines/api_endpoints
+docs: https://docs.openmind.com/api-reference/introduction
+conventions:
+  authentication:
+    style: api-key (header x-api-key or Authorization Bearer) for LLM/speech/vision; Clerk JWT bearer for Core account API
+    ref: authentication/openmind-authentication.yml
+  base_urls:
+    cloud: https://api.openmind.com
+    core: https://api.openmind.com/api/core
+    websocket: wss://api.openmind.com
+    premium_orchestrator: http://<robot-host>:5000  # OM1 ROS2 SDK, runs on-robot
+    premium_nav2: http://<robot-host>:5001          # OM1 ROS2 SDK, runs on-robot
+  llm_interface:
+    compatibility: OpenAI Chat Completions API format
+    path: /api/core/{provider}/chat/completions
+    providers: [openai, deepseek, gemini, xai, nearai, openrouter]
+  metering:
+    unit: OMCU (OpenMind Computational Unit)
+    balance_endpoint: GET /api/core/account/balance
+    notes: monthly credits reset each billing period; unused prepaid credits carry over
+  idempotency:
+    supported: false
+    notes: no idempotency key/header documented in the OpenMind API reference
+  pagination:
+    supported: false
+    notes: list endpoints (e.g. GET /api_keys) return full arrays; no pagination documented
+  error_envelope:
+    shape: '{"error": "<message>"}'
+    format: custom-json (not RFC 9457 problem+json)
+    ref: errors/openmind-problem-types.yml
+  rate_limiting:
+    style: per-plan requests/second ceiling; 429 Too Many Requests on exceed
+    ref: rate-limits/openmind-rate-limits.yml
+  content_type: application/json
+  versioning:
+    scheme: path-prefixed (/api/core); no dated/header API version documented
+    ref: lifecycle/openmind-lifecycle.yml

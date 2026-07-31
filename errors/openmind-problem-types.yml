@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.openmind.com/api-reference/introduction/account_and_key_management + https://docs.openmind.com/full-autonomy-guidelines/api_endpoints
+format: custom-json
+envelope: '{"error": "<message>"}'
+notes: >-
+  OpenMind returns a simple JSON error envelope (not RFC 9457 problem+json).
+  HTTP status codes and observed messages are captured from the documented
+  Core API and Premium ROS2 SDK REST API responses.
+problems:
+- status: 400
+  title: Bad Request
+  meaning: Invalid input parameters (missing/invalid id, invalid map_name, or a conflicting robot state such as SLAM/Nav2 already running).
+  examples: ['No data provided or invalid format', 'API key ID is required', 'map_name is not provided']
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid JWT/API key.
+  examples: ['User not found']
+- status: 403
+  title: Forbidden
+  meaning: Action not allowed for the current plan (e.g. API key limit reached).
+  examples: ['API key limit reached. Your starter plan allows up to 5 API keys.']
+- status: 404
+  title: Not Found
+  meaning: Resource does not exist or does not belong to the user (API key, map, account).
+  examples: ['API key not found', 'Map does not exist']
+- status: 429
+  title: Too Many Requests
+  meaning: Per-plan rate limit exceeded.
+  ref: rate-limits/openmind-rate-limits.yml
+- status: 500
+  title: Internal Server Error
+  meaning: Server-side failure.
+  examples: ['Failed to create API key', 'Failed to fetch API keys', 'Unable to get robot position from map frame']

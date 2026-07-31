@@ -1,8 +1,20 @@
 aid: openmind
 name: OpenMind
-description: 'OpenMind is a company surfaced as a portfolio company of pantera-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  OpenMind builds open-source software that makes robots useful. Its flagship
+  product, OM1, is a modular AI Hardware Abstraction Layer (HAL) and agent
+  runtime for robots that unifies perception, LLM reasoning, and action across
+  hardware platforms such as the Unitree Go2 quadruped, Unitree G1 humanoid,
+  TurtleBot4, Raspberry Pi, and Tesla. OpenMind operates a cloud API at
+  api.openmind.com that provides a unified multi-provider LLM endpoint (OpenAI,
+  Anthropic via OpenRouter, Google Gemini, X.AI, DeepSeek, NEAR.AI), speech
+  services (Google/ElevenLabs ASR, ElevenLabs/Riva TTS), a ViLA vision-language
+  model, and account/API-key management. Usage is metered in OMCU (OpenMind
+  Computational Units) across free, standard, builder, pro, and enterprise
+  plans. Premium REST APIs (Orchestrator and Nav2) provide remote SLAM,
+  navigation, patrol, docking, and map management for the OM1 ROS2 SDK. OpenMind
+  is backed by Pantera Capital and also develops the FABRIC decentralized robot
+  coordination layer and Asimov blockchain-based governance for robots.
 url: https://raw.githubusercontent.com/api-evangelist/openmind/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +22,65 @@ x-backed-by:
 - pantera-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://openmind.com/logo.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Crypto
-apis: []
+- Robotics
+- Robots
+- AI
+- Agents
+- LLM
+- ROS2
+- Machine Learning
+- Autonomy
+apis:
+- name: OpenMind LLM API
+  description: >-
+    Unified chat-completions endpoint that proxies multiple LLM providers
+    (OpenAI, Anthropic via OpenRouter, Google Gemini, X.AI, DeepSeek, NEAR.AI)
+    through a single OpenAI-compatible interface authenticated with an OpenMind
+    API key. Also fronts speech (ASR/TTS) and vision-language (ViLA) services.
+  humanURL: https://docs.openmind.com/api-reference/introduction/llm
+  baseURL: https://api.openmind.com
+  tags:
+  - LLM
+  - AI
+  - Speech
+  - Vision
+  properties:
+  - type: APIReference
+    url: https://docs.openmind.com/api-reference/introduction/llm
+- name: OpenMind Core API
+  description: >-
+    Account and API-key management API (create/delete/list keys, account OMCU
+    balance) at api.openmind.com/api/core, authenticated with a Clerk-issued
+    JWT bearer token.
+  humanURL: https://docs.openmind.com/api-reference/introduction/account_and_key_management
+  baseURL: https://api.openmind.com/api/core
+  tags:
+  - Account
+  - Keys
+  - Billing
+  properties:
+  - type: APIReference
+    url: https://docs.openmind.com/api-reference/introduction/account_and_key_management
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +88,59 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://openmind.org/
+  url: https://openmind.com/
+- type: DeveloperPortal
+  url: https://portal.openmind.com
+- type: Documentation
+  url: https://docs.openmind.com/
+- type: APIReference
+  url: https://docs.openmind.com/api-reference/introduction
+- type: GettingStarted
+  url: https://docs.openmind.com/developing/1_get-started
+- type: Pricing
+  url: https://docs.openmind.com/api-reference/api_pricing
+- type: SignUp
+  url: https://portal.openmind.com/
+- type: Support
+  url: mailto:support@openmind.com
+- type: GitHubOrganization
+  url: https://github.com/OpenMind
+- type: LLMsTxt
+  url: llms/openmind-llms.txt
+- type: Packages
+  url: packages/openmind-packages.yml
+- type: SDKs
+  url: packages/openmind-packages.yml
+- type: CLI
+  url: cli/openmind-cli.yml
+- type: MCPServer
+  url: mcp/openmind-mcp.yml
+- type: Authentication
+  url: authentication/openmind-authentication.yml
+- type: Conventions
+  url: conventions/openmind-conventions.yml
+- type: ErrorCatalog
+  url: errors/openmind-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/openmind-lifecycle.yml
+- type: ChangeLog
+  url: changelog/openmind-changelog.yml
+- type: Conformance
+  url: conformance/openmind-conformance.yml
+- type: DataModel
+  url: data-model/openmind-data-model.yml
+- type: Sandbox
+  url: sandbox/openmind-sandbox.yml
+- type: RateLimits
+  url: rate-limits/openmind-rate-limits.yml
+- type: Plans
+  url: plans/openmind-plans.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/openmind-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v1
