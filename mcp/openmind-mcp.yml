@@ -2,12 +2,10 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: https://docs.openmind.com/api-reference/introduction/account_and_key_management
-note: >-
-  OpenMind does not publish an official hosted/remote MCP server for its cloud
-  API. (OM1 itself is an MCP *client*: agents consume external MCP servers
-  per-mode — see https://docs.openmind.com/mcp/mcp-integration.) The tool list
-  below is a CANDIDATE derived from documented Core API operations, offered as a
-  starting point for an OpenMind API MCP server.
+note: 'OpenMind does not publish an official hosted/remote MCP server for its cloud API. (OM1 itself is
+  an MCP *client*: agents consume external MCP servers per-mode — see https://docs.openmind.com/mcp/mcp-integration.)
+  The tool list below is a CANDIDATE derived from documented Core API operations, offered as a starting
+  point for an OpenMind API MCP server.'
 server:
   name: openmind
   transport: http
@@ -28,3 +26,9 @@ tools:
 - name: chat_completion
   description: Send an OpenAI-format chat completion to a chosen LLM provider.
   source_operation: POST https://api.openmind.com/api/core/{provider}/chat/completions
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
