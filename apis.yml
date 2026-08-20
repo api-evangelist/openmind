@@ -44,6 +44,17 @@ tags:
 - Crypto
 - Robotics
 - Robots
+- Artificial Intelligence
+- Agents
+- LLM
+- ROS 2
+- Machine-Learning
+- Autonomy
+tags_raw:
+- Company
+- Crypto
+- Robotics
+- Robots
 - AI
 - Agents
 - LLM
@@ -60,6 +71,11 @@ apis:
   humanURL: https://docs.openmind.com/api-reference/introduction/llm
   baseURL: https://api.openmind.com
   tags:
+  - LLM
+  - Artificial Intelligence
+  - Speech
+  - Vision
+  tags_raw:
   - LLM
   - AI
   - Speech
