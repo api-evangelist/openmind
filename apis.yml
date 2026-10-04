@@ -62,7 +62,7 @@ tags:
 - Agents
 - LLM
 - ROS 2
-- Machine-Learning
+- Machine Learning
 - Autonomy
 tags_raw:
 - Company
@@ -75,6 +75,7 @@ tags_raw:
 - ROS2
 - Machine Learning
 - Autonomy
+- Machine-Learning
 apis:
 - name: OpenMind LLM API
   description: >-
