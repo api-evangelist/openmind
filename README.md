@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-OpenMind is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+OpenMind builds open-source software that makes robots useful. Its flagship product, OM1, is a modular AI Hardware Abstraction Layer (HAL) and agent runtime for robots that unifies perception, LLM reasoning, and action across hardware platforms such as the Unitree Go2 quadruped, Unitree G1 humanoid, TurtleBot4, Raspberry Pi, and Tesla. OpenMind operates a cloud API at api.openmind.com that provides a unified multi-provider LLM endpoint (OpenAI, Anthropic via OpenRouter, Google Gemini, X.AI, DeepSeek, NEAR.AI), speech services (Google/ElevenLabs ASR, ElevenLabs/Riva TTS), a ViLA vision-language model, and account/API-key management. Usage is metered in OMCU (OpenMind Computational Units) across free, standard, builder, pro, and enterprise plans. Premium REST APIs (Orchestrator and Nav2) provide remote SLAM, navigation, patrol, docking, and map management for the OM1 ROS2 SDK. OpenMind is backed by Pantera Capital and also develops the FABRIC decentralized robot coordination layer and Asimov blockchain-based governance for robots.
 
-Backed by: pantera-capital — https://openmind.org/
+**Areas:** Company · Cryptocurrency · Robotics · Robots · Artificial Intelligence · Agents · LLM · ROS 2 · Machine Learning · Autonomy
+
+## OpenMind on APIs.io
+
+Everything profiled for OpenMind is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/openmind/](https://apis.io/providers/openmind/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [OpenMind LLM API](https://apis.io/apis/openmind/openmind-llm-api/) — Unified chat-completions endpoint that proxies multiple LLM providers (OpenAI, Anthropic via OpenRouter, Google Gemini, X.AI, DeepSeek, NEAR.AI) through a…
+- [OpenMind Core API](https://apis.io/apis/openmind/openmind-core-api/) — Account and API-key management API (create/delete/list keys, account OMCU balance) at api.openmind.com/api/core, authenticated with a Clerk-issued JWT…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [openmind](https://apis.io/servers/openmind/openmind/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Openmind Authentication](https://apis.io/security/openmind/openmind-authentication/)
+- [Openmind Domain Security](https://apis.io/security/openmind/openmind-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Openmind Plans](https://apis.io/plans/openmind/openmind-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Openmind Rate Limits](https://apis.io/rate-limits/openmind/openmind-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://openmind.com/)
+- [Documentation](https://docs.openmind.com/)
+- [Getting started](https://docs.openmind.com/developing/1_get-started)
+- [API reference](https://docs.openmind.com/api-reference/introduction)
+- [Pricing](https://docs.openmind.com/api-reference/api_pricing)
+- [Sign up](https://portal.openmind.com/)
+- [Blog](https://openmind.com/blog/)
+- [GitHub](https://github.com/OpenMind)
+
+## API Evangelist rating
+
+**Kin Score 37.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 70.8 |
+| Access clarity | 42.1 |
+
+**Agent readiness 6.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/openmind/](https://apis.io/providers/openmind/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenMind: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/openmind/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
